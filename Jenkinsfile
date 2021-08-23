@@ -26,7 +26,7 @@ pipeline {
       }
       stage ('validate'){
         steps {
-          sh 'curl http://127.0.0.1:5000/note/'
+          sh 'curl http://3.238.32.218:5000/note/'
         }
       }
       
