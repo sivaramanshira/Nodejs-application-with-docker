@@ -21,12 +21,12 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'docker run -it -d -p 8001:9005 mynodeapp:latest'
+           sh 'docker run -it -d -p 5000:9005 mynodeapp:latest'
         }
       }
       stage ('validate'){
         steps {
-          sh 'curl http://127.0.0.1:8001/note/'
+          sh 'curl http://127.0.0.1:5000/note/'
         }
       }
       
