@@ -11,7 +11,7 @@ pipeline {
       }
       stage ('build'){
         steps {
-          sh '/usr/local/bin/docker build -t mynodeapp:latest .'
+          sh 'docker build -t mynodeapp:latest .'
         }
       }
       stage ('image security scan'){
