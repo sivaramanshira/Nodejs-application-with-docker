@@ -11,18 +11,18 @@ pipeline {
       }
       stage ('build'){
         steps {
-          sh 'docker build -t mynodeapp:latest --target=dev .'
+          sh 'docker build -t mynodeappdev:latest --target=dev .'
         }
       }
       stage ('deploy'){
         steps {
-           sh 'docker run -it -d -p 5001:9006 mynodeapp:latest'
+           sh 'docker run -it -d -p 8001:9006 mynodeappdev:latest'
         }
       }
       stage ('validate'){
         steps {
           sh 'sleep 20'
-          sh 'curl http://34.200.231.245:5000/note/'
+          sh 'curl http://127.0.0.1:8001/note/'
           sh 'echo "url respondin"'
         }
       }
