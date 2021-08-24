@@ -16,7 +16,8 @@ pipeline {
       }
       stage ('image security scan'){
         steps {
-           sh 'docker scan mynodeapp:latest'
+           #sh 'docker scan mynodeapp:latest'
+          sh 'echo "Hello scan"'
         }
       }
       stage ('deploy'){
@@ -26,7 +27,7 @@ pipeline {
       }
       stage ('validate'){
         steps {
-          sh 'curl http://3.238.32.218:5000/note/'
+          sh 'curl http://34.200.231.245:5000/note/'
         }
       }
       
