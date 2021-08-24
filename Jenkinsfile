@@ -14,11 +14,6 @@ pipeline {
           sh 'docker build -t mynodeapp:latest .'
         }
       }
-      stage ('image security scan'){
-        steps {
-          sh 'echo "Hello scan"'
-        }
-      }
       stage ('deploy'){
         steps {
            sh 'docker run -it -d -p 5000:9005 mynodeapp:latest'
