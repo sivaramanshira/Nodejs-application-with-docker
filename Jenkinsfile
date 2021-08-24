@@ -11,12 +11,12 @@ pipeline {
       }
       stage ('build'){
         steps {
-          sh 'docker build -t mynodeapp:latest .'
+          sh 'docker build -t mynodeapp:latest --target=dev .'
         }
       }
       stage ('deploy'){
         steps {
-           sh 'docker run -it -d -p 5000:9005 mynodeapp:latest'
+           sh 'docker run -it -d -p 5001:9006 mynodeapp:latest'
         }
       }
       stage ('validate'){
