@@ -23,6 +23,7 @@ pipeline {
         steps {
           sh 'sleep 20'
           sh 'curl http://34.200.231.245:5000/note/'
+          sh 'echo "url respondin"'
         }
       }
       
