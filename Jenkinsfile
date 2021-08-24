@@ -23,8 +23,8 @@ pipeline {
       }
       stage ('validate'){
         steps {
-          sh 'sleep 50'
-          sh 'curl http://127.0.0.1:8001/note/'
+          sh 'sleep 30'
+          sh 'curl http://127.0.0.1:8000/note/'
           sh 'curl http://127.0.0.1:8001/note/'
           sh 'echo "url respondin"'
         }
