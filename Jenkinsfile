@@ -17,8 +17,8 @@ pipeline {
       }
       stage ('deploy'){
         steps {
-           sh 'docker run -it -d -p 8000:9005 -h myhost1 mynodeapprod:latest'
-           sh 'docker run -it -d -p 8001:9006 -h myhost2 mynodeappdev:latest'
+           sh 'docker run -it -d -p 5000:9005 -h myhost1 mynodeapprod:latest'
+           sh 'docker run -it -d -p 5001:9006 -h myhost2 mynodeappdev:latest'
         }
       }
       stage ('validate'){
