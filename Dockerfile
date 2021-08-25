@@ -6,12 +6,12 @@ RUN npm install
 
 from base as prod
 ENV NODE_ENV=prod
-EXPOSE 9005
+EXPOSE 5000
 ENTRYPOINT ["node"]
 CMD ["server.js"]
 
 from base as dev
 ENV NODE_ENV=dev
-EXPOSE 9006
+EXPOSE 5001
 ENTRYPOINT ["node"]
 CMD ["serverdev.js"]
